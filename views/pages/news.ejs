@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head %>
+
+<body>
+
+    <div>
+        <h1>NYT Scraped</h1>
+        <h2> News</h2>
+        <div>
+            <% results.forEach(function(info) { %>
+            <%- include('../partials/info', info); %>
+            <% }); %>
+        </div>
+        <!-- <div>
+            <p><%= response.title %></p>
+            <p><%= response.summary %></p>
+            <a href="<% = response.link %>"></a>
+        </div> -->
+    </div>
+    <% include ../partials/script %>
+
+</body>
+
+</html>
